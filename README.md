@@ -9,13 +9,13 @@ Pre requisite:
 - Create docker account - hub.docker.com  
 - Create new repository  
 
-1. Modify pom.xml and update build/finalName  
+1. Create Springboot project.
+Modify pom.xml and update build/finalName  
 <finalName>helloworld-demo</finalName>  
 
-2. Do mvn clean install to create jar file  
-
+Do mvn clean install to create jar file  
+2. Create Dockerfile - no extension and case sensitive filename in the root directory.  
 3. Create local docker image.  
-Create Dockerfile (without extension) in the root directory.  
 Open command line    
 docker build -t helloworld-demo .  
 OR  
@@ -36,7 +36,7 @@ Push
 
 Browse your docker repository to verify  
 
-5. To pull docker image  
+5. Pull and run docker image  
    docker run -p 8080:8080 helloworld-demo:latest  
 It will automatically start the spring boot application
 
